@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head> <link rel="stylesheet" href="css/style.css">
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>いえしさん、XBPのページ</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<body>
+
+    <div><h1>HTMLとは？</h1>
+        <div>
+
+         <div>インターネットの表示ファイル方式です。<br></div>
+         
+         <div>いつも我々はインターネットブラウズするときはこのファイルをみているのです。<br></div>
+        
+         <div>Hyper Text Markup Languageの略で「テキストを超越した文書」という訳なのだそう<br></div>
+         
+         <div> どういうところが超越したのかといえば、画像や他の文献（リンク）を提示できたり、<br></div>
+        
+         <div>文字の大きさをタグを使って指定できたりします。スパイのコードワードみたいな感じでしょう？<br></div>
+        
+         <div><img src="images/webserver_html.png"width="40%"><br></div>
+         </div>
+    </div>
+
+    <div><h1>タグについて</h1>
+        <div>
+        ここではそんなタグについてを文字の大きさで説明します。<br>
+        
+        <div>例えば下記のように記述した場合、文字は見出しとしての「意味」を持ち、<br></div>
+            
+             <div>それに適した文字の大きさになります。</div>
+            <xmp>
+                ■<h1>見出し１</h1>    大見出し
+        
+                ■<h2>見出し2</h2>    中見出し
+        
+                ■<h3>見出し3</h3>    小出し
+        
+            </xmp>
+            【見え方】
+            <h1>見出し１</h1>
+            <h2>見出し２</h2>
+            <h3>見出し２</h3>
+            ＜出典、参考リンク＞
+            <a href="https://kuxbp.github.io/xbp/xbp2021/design_e12/01abouthtml/hp1.html"><br>
+                XBP；htmlに関して①</a>>
+        </div>
+    </div>
+
+    <div><h1>編集について</h1></div>
+    <h2>Work①文字を書く</h2>
+    <div>
+        段落など、塊ごとにdivタグで括るようにして、文字を書いていく。<br>
+        divはdivision（分割）の略。<br>
+        <xmp>
+            <div>
+                マツダは神、これはゆるぎない事実。
+            </div>
+        </xmp>
+        改行はbrタグを使う。
+        <xmp>
+            <div>
+                東洋工業<br>
+                2002/02/24<br>
+                きゅきゅきゅきゅ
+            </div>
+        </xmp>
+    </div>
+    <h2>Work②画像の挿入</h2>
+    <div>
+        画像の表示にはimgタグを使う。（imageの略）<br>
+        imgタグのsrcという属性にファイルパスを記載します。(srcはsourceの略)<br>
+        width属性は幅を設定します。%で指定するとスクリーンに対して何%の幅にするかを指定できる。<br>
+        【書き方】
+        <xmp>
+            画像を表示(30%)<br>
+            <img src="images/testimage.png" width="30%"><br>
+            画像を表示(40%)<br>
+            <img src="images/testimage.png" width="40%"><br>
+        </xmp>
+
+    </div>
+    <div>
+    画像を表示(30%)<br>
+    <img src="images/testimage.png" width="30%"><br>
+    画像を表示(40%)<br>
+    <img src="images/" width="40%"><br>
+    
+    </div>
+    <h3>画像サイズに関する注意</h3>
+    <diV>
+        スマホやデジカメで撮影した写真は解像度が高く、サイズが大きい。<br>
+        よって写真をGitHubにプッシュする場合は写真のサイズを1MB(1024KB)以下に落とさなければならない。<br>
+        Macでの写真サイズの変更方法(<a href="https://doyodoyo.github.io/doyolab/03photomemo.html" target="_blank">doyolab</a>)<br>
+        Windowsでの写真サイズの変更方法(<a href="https://office-hack.com/windows/windows10-image-resize/" target="_blank">外部サイト</a>)
+
+    </diV>
+
+    <h2>Work③箇条書き</h2>
+
+    <div>
+        ■work③:test.htmlに何か箇条書きをしてみましょう<br><br>
+        番号付きの箇条書きはolタグ(ordered listの略です)<br>
+        各項目はliタグで括ります（listの略です)<br>
+        【書き方】
+        <xmp>
+            <ol>
+                <li>もとじーぴー</li>
+                <li>えふわんさんせん</li>
+            </ol>
+        </xmp>
+        【結果】
+        <ol>
+            <li>もとじーぴ―</li>
+            <li>えふわんさんせん</li>
+        </ol>
+    </div>
+    <div>
+        番号なしの箇条書きはulタグ(Unordered listの略)
+        【書き方】
+        <xmp>
+            <ul>
+                <li>たけもとぴあの</li>
+                <li>みんなまあるく</li>
+            </ul>
+        </xmp>
+        【結果】
+        <ul>
+            <li>たけもとぴあの</li>
+            <li>みんなまあるく</li>
+        </ul>
+
+    </div>
+    <h2>Work④リンク</h2>
+    <div>
+        リンクを作りたい時はaタグを使う(Anchorの略)<br>
+        href属性にリンク先を記載します(hypertext referenceの略)<br>
+        target属性に_blankを設定すると新しいタブでリンクが開く。設定しないと、同じタブになる。<br>
+        【書き方】
+        <xmp>
+            <a href="index.html">デザイン演習Ⅰ・Ⅱトップページ</a><br>
+            <a href="../index.html">XBPトップページ</a><br>
+            <a href="https://www.mazda.co.jp/" target="_blank">Mazda</a><br>
+            <a href="files/test.pdf" target="_blank">pdfファイル</a>
+
+        </xmp>
+        【結果】<br>
+        <a href="index.html">デザイン演習Ⅰ・Ⅱトップページ</a>→同じ階層（フォルダ）にあるindex.htmlに移動<br>
+        <a href="../index.html">XBPトップページ</a>→「../」はひとつ上の階層を意味する。<br>
+        <a href="https://www.mazda.co.jp/" target="_blank">Mazda</a>→新しいタブでyahooを開く<br>
+        <a href="files/test.pdf" target="_blank">pdfファイル</a>→filesフォルダのtest.pdfを新しいタブで開く<br>
+    </div>
+    <h3>外部サイトに関して</h3>
+    <div>
+        外部サイトにリンクを貼る場合は自分のサイトではないことを、明記！！！
+    </div>
+    <h3>動画に関して</h3>
+    <div>
+    動画ファイルは重いので、絶対にGitHubにプッシュしないこと。リポジトリが壊れる。<br>
+    動画を表示したい場合は、動画をYouTubeにアップして、そこにリンクを貼るか、htmlに埋め込むコードを発行して、htmlファイルに貼り付けましょう。<br>
+    参考：<a href="https://support.google.com/youtube/answer/171780?hl=ja" target="_blank">YouTubeヘルプ</a>
+    </div>
+    <h2>Work⑤タイトル</h2>
+    <div>
+        ■work⑤:test.htmlのheadの部分のtitleを自分なりのタイトルに変更してみましょう。<br><br>
+        【書き方】
+        <xmp>
+            <title>XBPのページ</title>
+        </xmp>
+        【結果】
+        ブラウザのタブの表示を確認！
+
+       
+        <div> <!-- ④↓に外部リンクを作ってみよう --> </div>
+         <a href="index.html">デザイン演習Ⅰ・Ⅱトップページ</a><br>
+         <a href="../index.html">XBPトップページ</a><br>
+        
+    </div>
+</body>
+</html>
